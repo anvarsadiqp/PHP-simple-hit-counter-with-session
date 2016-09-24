@@ -18,5 +18,5 @@ session_start();
 	  fwrite($fil, $dat+1);
 	  }
 	$_SESSION['start'] = "started";
-}
+  }
 ?>
