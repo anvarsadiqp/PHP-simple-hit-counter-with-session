@@ -6,26 +6,26 @@ Check it have any issues let me know<br>
 Ping me on contact@anvarsadiqp.me<br>
 wwww.anvarsadiqp.me/about/<br>
 
-<?php
-error_reporting(0);
-session_start();
-  if(isset($_SESSION['start'])){
-	  if (file_exists('hit.txt')) {
-          $fil = fopen('hit.txt', r);
-          $dat = fread($fil, filesize('hit.txt'));
-          echo "Hit:".$dat;
-          }
-    }
-  else{
-	  if (file_exists('hit.txt')){
-	  $fil = fopen('hit.txt', r);
-	  $dat = fread($fil, filesize('hit.txt')); 
-	  echo $dat+1;
-	  fclose($fil);
-	  $fil = fopen('hit.txt', w);
-	  fwrite($fil, $dat+1);
-	  }
-	$_SESSION['start'] = "started";
-  }
+<?php<br>
+error_reporting(0);<br>
+session_start();<br>
+  if(isset($_SESSION['start'])){<br>
+	  if (file_exists('hit.txt')) {<br>
+          $fil = fopen('hit.txt', r);<br>
+          $dat = fread($fil, filesize('hit.txt'));<br>
+          echo "Hit:".$dat;<br>
+          }<br>
+    }<br>
+  else{<br>
+	  if (file_exists('hit.txt')){<br>
+	  $fil = fopen('hit.txt', r);<br>
+	  $dat = fread($fil, filesize('hit.txt')); <br>
+	  echo $dat+1;<br>
+	  fclose($fil);<br>
+	  $fil = fopen('hit.txt', w);<br>
+	  fwrite($fil, $dat+1);<br>
+	  }<br>
+	$_SESSION['start'] = "started";<br>
+  }<br>
 ?>
 
